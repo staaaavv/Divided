@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-image: url('../images/λεο.jpg'); /* ή σωστή διαδρομή */
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;  /* << ΜΑΓΙΚΗ ΓΡΑΜΜΗ */
+  background-color: rgba(0,0,0,0.5);  /* 50% μαύρη διαφάνεια */
+    color: white;
+    padding: 2em;
+    height: 200px;
+    position: relative;
+}
+
+.hero {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    padding: 1em;
+}
+
+.content {
+    padding: 2em;
+    text-align: center;
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.product img {
+    width: 200px;
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+footer {
+    background-image: url('../images/λεο.jpg'); /* ή σωστή διαδρομή */
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;  /* << ΜΑΓΙΚΗ ΓΡΑΜΜΗ */
+  background-color: rgba(0,0,0,0.5);  /* 50% μαύρη διαφάνεια */
+    color: white;
+    height: 50px;
+    position: relative;
+    text-align: center;
+    padding: 1em;
+}
+
+/* Βασικό στυλ */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+}
+
+.menu-btn {
+  display: none; /* κρύβεται σε υπολογιστή */
+  font-size: 1.5em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+/* Κανόνες για κινητά/tablet */
+@media (max-width: 768px) {
+  .menu {
+    display: none; /* κρύβει το μενού εξ αρχής */
+    flex-direction: column;
+    gap: 0.5em;
+    background-color: white;
+    padding: 1em;
+  }
+
+  .menu.active {
+    display: flex; /* δείχνει όταν έχει active */
+  }
+
+  .menu-btn {
+    display: block; /* δείχνει κουμπί ☰ */
+  }
+}
